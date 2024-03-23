@@ -1,8 +1,428 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bandage-Tailwind</title>
-    
- </html>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        default: "#000",
+                        title: '#BDBDBD',
+                        // bg only below 
+                        tileBg: '#FBFBFB',
+                    },
+                    fontSize: {
+                        8: "8px",
+                        12: "12px",
+                        16: "16px",
+                        40: "40px",
+                        64: "64px"
+                    },
+                    spacing: {
+                        20: "20px",
+                        30: "30px",
+                        40: "40px",
+                        50: "50px",
+                        60: "60px",
+                        64: "64px"
+                    },
+                    maxWidth: {
+                        500: 500,
+                    }
+
+                    // fontWeight: {
+                    //     700: 700,
+                    // }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="text-default">
+
+    <header class = "m-[35px] ">
+        <img src="./assets/svg/Bandage.svg" alt="">
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <li class="navigation__list-item">Home</li>
+                <li class="navigation__list-item">Shop</li>
+                <li class="navigation__list-item">About</li>
+                <li class="navigation__list-item">Blog</li>
+                <li class="navigation__list-item">Contact</li>
+                <li class="navigation__list-item">Pages</li>
+                <li class="navigation__list-item"> <img src="./assets/svg/login-icon.svg" alt="">Login / Register</li>
+                <li class="navigation__list-item"> <img src="./assets/svg/search-icon.svg" alt=""></li>
+                <li class="navigation__list-item"> <img src="./assets/svg/cart-icon.svg" alt="">1</li>
+                <li class="navigation__list-item"> <img src="./assets/svg/favourite-icon.svg" alt="">1</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1 class="text-64 font-bold mt-[63px] max-w-[320px] uppercase">Shop</h1>
+            <div>
+                <p>Home</p><img src="./assets/svg/Vector-more.svg" alt="">
+                <p>Shop</p>
+            </div>
+            <div class="bg-[url('./assets/img/cloths_bg_1.jpg')]">
+                <h2>CLOTHS</h2>
+                <p>5 items</p>
+            </div>
+            <div class="bg-[url('./assets/img/cloths_bg_2.jpg')]"></div>
+            <h2>CLOTHS</h2>
+            <p>5 items</p>
+            </div>
+            <div class="bg-[url('./assets/img/cloths_bg_3.jpg')]"></div>
+            <h2>CLOTHS</h2>
+            <p>5 items</p>
+            </div>
+            <div class="bg-[url('./assets/img/cloths_bg_4.jpg')]"></div>
+            <h2>CLOTHS</h2>
+            <p>5 items</p>
+            </div>
+            <div class="bg-[url('./assets/img/cloths_bg_5.jpg')]"></div>
+            <h2>CLOTHS</h2>
+            <p>5 items</p>
+            </div>
+        </section>
+        <section>
+            <p>Showing all 12 results</p>
+            <div>
+                <p>Views:</p>
+                <span><img src="./assets/svg/filter-icon.svg" alt="filter-icon"></span>
+                <span><img src="./assets/svg/sort-icon.svg" alt="sort-icon"></span>
+            </div>
+            <div>
+                <button>Popularity <img src="./assets/svg/Vector-down.svg" alt="Vector-down"></button>
+                <button>Filter</button>
+            </div>
+        </section>
+        <section>
+            <ul class="wrap-line-1">
+                <li>
+                    <figure>
+                        <picture>
+                            <source media="(min-width:768px)" srcset="./assets/img/product_desktop_1.png">
+                            <img src="./assets/img/product_mobile_1.png" alt="picture 1">
+                        </picture>
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <picture>
+                            <source media="(min-width:768px)" srcset="./assets/img/product_desktop_2.png">
+                            <img src="./assets/img/product_mobile_2.png" alt="picture 2">
+                        </picture>
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <picture>
+                            <source media="(min-width:768px)" srcset="./assets/img/product_desktop_3.png">
+                            <img src="./assets/img/product_mobile_3.png" alt="picture 3">
+                        </picture>
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <picture>
+                            <source media="(min-width:768px)" srcset="./assets/img/product_desktop_4.png">
+                            <img src="./assets/img/product_mobile_4.png" alt="picture 4">
+                        </picture>
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+            <ul class="wrap-line-2">
+                <li>
+                    <figure>
+                        <img src="./assets/img/product_desktop_5.png" alt="picture 5">
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+
+                <li>
+                    <figure>
+                        <picture>
+                            <img src="./assets/img/product_desktop_6.png" alt="picture 6">
+                        </picture>
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <picture>
+                            <img src="./assets/img/product_desktop_7.png" alt="picture 7">
+                        </picture>
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <picture>
+                            <img src="./assets/img/product_desktop_8.png" alt="picture 8">
+                        </picture>
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <picture>
+                            <img src="./assets/img/product_desktop_9.png" alt="picture 9">
+                        </picture>
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <picture>
+                            <img src="./assets/img/product_desktop_10.png" alt="picture 10">
+                        </picture>
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <picture>
+                            <img src="./assets/img/product_desktop_11.png" alt="picture 11">
+                        </picture>
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <picture>
+                            <img src="./assets/img/product_desktop_12.png" alt="picture 12">
+                        </picture>
+                        <figcaption>
+                            <strong>Graphic Design</strong>
+                            <p>English Department</p>
+                            <div class="bestsellers__prices"><span
+                                    class="bestsellers__prices_old-price">$16.48</span><span
+                                    class="bestsellers__prices_new-price">$6.48</span></div>
+                            <div class="featured-posts__list_colors">
+                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                            </div>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+        <section class="partners">
+            <img src="assets/svg/fa-brands_hooli.svg" alt="hooli">
+            <img src="assets/svg/fa-brands_lyft.svg" alt="lyft">
+            <img src="assets/svg/fa-brands_pied-piper-hat.svg" alt="pied piper hat">
+            <img src="assets/svg/fa-brands_stripe.svg" alt="stripe">
+            <img src="assets/svg/fa-brands_aws.svg" alt="aws">
+            <img src="assets/svg/fa-brands_reddit-alien.svg" alt="reddit">
+        </section>
+    </main>
+    <footer class="footer">
+        <ul class="footer__main-list">
+            <li>
+                <ul>
+                    <li><a href="#" class="footer__main-list_heading-item">Company Info</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Carrier</a></li>
+                    <li><a href="#">We are hiring</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#" class="footer__main-list_heading-item">Legal</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Carrier</a></li>
+                    <li><a href="#">We are hiring</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#" class="footer__main-list_heading-item">Features</a></li>
+                    <li><a href="#">Business Marketing</a></li>
+                    <li><a href="#">User Analytic</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                    <li><a href="#">Unlimited Support</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li><a href="#" class="footer__main-list_heading-item">Resources</a></li>
+                    <li><a href="#">IOS & Android</a></li>
+                    <li><a href="#">Watch a Demo</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">API</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul class="footer__main-list__form">
+                    <li><a href="#" class="footer__main-list_heading-item">Get In Touch</a></li>
+                    <li>
+                        <div>
+                            <form action="#" class="footer__form">
+                                <input class="footer__form_email" type="email" id="email"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" placeholder="Your Email"
+                                    required />
+                                <button class="footer__form_button" type="submit" id="email-button">Subscribe</button>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="footer__main-list__post-form-text">
+                        <p>Lore imp sum dolor Amit</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="footer__rights-reserved">
+            <span class="footer__rights-reserved-text">Made With Love By Finland All Right Reserved </span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
