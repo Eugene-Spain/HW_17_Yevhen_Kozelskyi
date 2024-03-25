@@ -36,8 +36,10 @@
                         5: "5px",
                         10: "10px",
                         15: "15px",
+                        16: "16px",
                         20: "20px",
                         24: "24px",
+                        25: "25px",
                         30: "30px",
                         35: "35px",
                         40: "40px",
@@ -47,6 +49,8 @@
                         63: "63px",
                         64: "64px",
                         70: "70px",
+                        100: "100px",
+                        200: "200px",
                         300: "300px",
                         331: "331px",
 
@@ -56,6 +60,7 @@
                     },
                     boxShadow: {
                         custom: '0px 2px 4px 0px rgba(0, 0, 0, 0.1)',
+                        shop: '0px 2px 4px 0px rgba(33, 33, 33, 0.25)',
                     }
                 }
             }
@@ -66,72 +71,107 @@
 <body class="text-main font-sans">
 
     <header class="m-35">
-        <div class="flex justify-between">
+        <div class="hidden lg:flex bg-[#23856D] text-white justify-evenly pt-24 pb-24 ">
+            <div class="flex gap-30">
+                <div class="flex gap-20 items-center justify-center">
+                    <span class="flex items-center">
+                        <img src="assets/svg/top/top-telephone.svg" alt="telephone" class="w-16 mr-5">
+                        <span class="text-12">(225) 555-0118</span>
+                    </span>
+                    <span class="flex items-center">
+                        <img src="assets/svg/top/top-email.svg" alt="email" class="w-16 mr-5">
+                        <span class="text-12">michelle.rivera@example.com</span>
+                    </span>
+                </div>
+                <div>
+                    <p class="font-bold text-14">Follow Us and get a chance to win 80% off</p>
+                </div>
+                <div class="flex items-center gap-10">
+                    <p class="font-bold text-14">Follow Us :</p>
+                    <img src="assets/svg/top/top-instagram.svg" alt="instagram">
+                    <img src="assets/svg/top/top-youtube.svg" alt="youtube">
+                    <img src="assets/svg/top/top-facebook.svg" alt="facebook">
+                    <img src="assets/svg/top/top-twitter.svg" alt="twitter">
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between md:hidden">
             <img src="./assets/svg/Bandage.svg" alt="main logo">
             <img src="./assets/svg/burger-menu.svg" alt="burger">
         </div>
-        <nav class="">
-            <ul class="flex flex-col gap-30 items-center justify-center mt-70 mb-40 text-30">
-                <li class="font-bold">Home</li>
-                <li class="text-add">Shop</li>
-                <li class="text-add">About</li>
-                <li class="text-add">Blog</li>
-                <li class="text-add font-semibold">Contact</li>
-                <li class="text-add">Pages</li>
-                <li class=" flex items-center text-primary gap-5 font-semibold"><img src="./assets/svg/login-icon.svg"
-                        alt="login-icon">Login / Register</li>
-                <li class=" flex items-center text-primary"><img src="./assets/svg/search-icon.svg" alt="search-icon">
-                </li>
-                <li class=" flex items-center text-primary gap-5"><img src="./assets/svg/cart-icon.svg"
-                        alt="cart-icon">1</li>
-                <li class=" flex items-center text-primary gap-5"><img src="./assets/svg/favourite-icon.svg"
-                        alt="favourite-icon">1</li>
+        <nav>
+            <ul
+                class="flex flex-col items-center gap-30 justify-center mt-70 mb-40 text-30 md:flex-row md:text-14 md:justify-evenly">
+                <img src="./assets/svg/Bandage.svg" alt="main logo" class="hidden md:block">
+                <div class="flex flex-col items-center justify-center gap-30 md:flex-row md:gap-15">
+                    <li class="font-bold md:font-normal text-add">Home</li>
+                    <li class="text-add md:flex md:gap-[6px] md:items-center md:text-main">Shop<img
+                            src="./assets/svg/Vector-down-black.svg" alt="Vector-down" class="hidden md:block"></li>
+                    <li class="text-add">About</li>
+                    <li class="text-add">Blog</li>
+                    <li class="text-add font-semibold">Contact</li>
+                    <li class="text-add">Pages</li>
+                </div>
+                <div class="flex flex-col items-center justify-center gap-30 md:flex-row md:gap-15">
+                    <li class=" flex items-center text-primary gap-5 font-semibold md:min-w-[120px]"><img
+                            src="./assets/svg/login-icon.svg" alt="login-icon" class="w-[12px]">Login / Register</li>
+                    <li class=" flex items-center text-primary"><img src="./assets/svg/search-icon.svg"
+                            alt="search-icon" class="w-16">
+                    </li>
+                    <li class=" flex items-center text-primary gap-5"><img src="./assets/svg/cart-icon.svg"
+                            alt="cart-icon" class="w-16">1</li>
+                    <li class=" flex items-center text-primary gap-5"><img src="./assets/svg/favourite-icon.svg"
+                            alt="favourite-icon" class="w-16">1</li>
+                </div>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="bg-altBg flex flex-col justify-center items-center">
-            <h1 class="text-24 font-bold pt-48">Shop</h1>
-            <div class="flex justify-center gap-15 items-center mt-60 mb-40">
-                <p>Home</p><img src="./assets/svg/Vector-more.svg" alt=">">
-                <p>Shop</p>
+        <section class="bg-altBg flex flex-col justify-center items-center pb-[48px]">
+            <div class="flex flex-col items-center pt-60 pb-40 lg:flex-row lg:justify-between lg:min-w-full lg:px-200">
+                <h1 class="text-24 font-bold">Shop</h1>
+                <div class="flex justify-center gap-15 items-center">
+                    <p class="font-bold">Home</p><img src="./assets/svg/Vector-more.svg" alt=">" class="h-16">
+                    <p class="text-muted font-bold">Shop</p>
+                </div>
             </div>
-            <div class="flex flex-col gap-15 text-white font-bold">
+            <div class="flex flex-col gap-15 text-white font-bold lg:flex-row">
                 <div
-                    class="bg-[url('./assets/img/cloths_bg_5.png')] bg-no-repeat min-w-331 h-300 flex flex-col justify-center items-center ">
+                    class="bg-[url('./assets/img/cloths_bg_5.png')] bg-no-repeat min-w-331 min-h-300 flex flex-col justify-center items-center lg:min-w-[194px] lg:min-h-[223px] lg:bg-cover lg:shadow-shop">
                     <h2 class="mb-30">CLOTHS</h2>
                     <p>5 items</p>
                 </div>
                 <div
-                    class="bg-[url('./assets/img/cloths_bg_1.png')] bg-no-repeat min-w-331 h-300 flex flex-col justify-center items-center ">
+                    class="bg-[url('./assets/img/cloths_bg_1.png')] bg-no-repeat min-w-331 min-h-300 flex flex-col justify-center items-center lg:min-w-[194px] lg:min-h-[223px] lg:bg-cover lg:shadow-shop">
                     <h2 class="mb-30">CLOTHS</h2>
                     <p>5 items</p>
                 </div>
                 <div
-                    class="bg-[url('./assets/img/cloths_bg_2.png')] bg-no-repeat min-w-331 h-300 flex flex-col justify-center items-center ">
+                    class="bg-[url('./assets/img/cloths_bg_2.png')] bg-no-repeat min-w-331 min-h-300 flex flex-col justify-center items-center lg:min-w-[194px] lg:min-h-[223px] lg:bg-cover lg:shadow-shop">
                     <h2 class="mb-30">CLOTHS</h2>
                     <p>5 items</p>
                 </div>
                 <div
-                    class="bg-[url('./assets/img/cloths_bg_3.png')] bg-no-repeat min-w-331 h-300 flex flex-col justify-center items-center ">
+                    class="bg-[url('./assets/img/cloths_bg_3.png')] bg-no-repeat min-w-331 min-h-300 flex flex-col justify-center items-center lg:min-w-[194px] lg:min-h-[223px] lg:bg-cover lg:shadow-shop">
                     <h2 class="mb-30">CLOTHS</h2>
                     <p>5 items</p>
                 </div>
                 <div
-                    class="bg-[url('./assets/img/cloths_bg_4.png')] bg-no-repeat min-w-331 h-300 flex flex-col justify-center items-center">
+                    class="bg-[url('./assets/img/cloths_bg_4.png')] bg-no-repeat min-w-331 min-h-300 flex flex-col justify-center items-center lg:min-w-[194px] lg:min-h-[223px] lg:bg-cover lg:shadow-shop">
                     <h2 class="mb-30">CLOTHS</h2>
                     <p>5 items</p>
                 </div>
             </div>
         </section>
-        <section class="mt-24 flex flex-col justify-center items-center text-14 gap-24">
+        <section
+            class="mt-24 mb-[104px] flex flex-col justify-center items-center text-14 gap-24 lg:flex-row lg:justify-between lg:px-200">
             <p class="text-add font-bold">Showing all 12 results</p>
             <div class="flex gap-15 items-center">
                 <p class="text-add font-bold">Views:</p>
                 <span class="border p-15"><img src="./assets/svg/filter-icon.svg" alt="filter-icon"></span>
                 <span class="border p-[16.5px]"><img src="./assets/svg/sort-icon.svg" alt="sort-icon"></span>
             </div>
-            <div class="flex gap-15 mb-[104px]">
+            <div class="flex gap-15">
                 <button
                     class="flex items-center justify-center gap-5 w-[141px] h-50 border bg-buttonBg rounded text-add">Popularity
                     <img src="./assets/svg/Vector-down.svg" alt="Vector-down"></button>
@@ -139,7 +179,7 @@
             </div>
         </section>
         <section>
-            <ul class="flex flex-col gap-30 justify-center items-center">
+            <ul class="flex flex-col gap-30 justify-center items-center lg:flex-row">
                 <li>
                     <figure>
                         <picture>
@@ -166,7 +206,7 @@
                             <source media="(min-width:768px)" srcset="./assets/img/product_desktop_2.png">
                             <img src="./assets/img/product_mobile_2.png" alt="picture 2">
                         </picture>
-                        .<figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
+                        <figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
                             <h3>Graphic Design</h3>
                             <p class="text-add">English Department</p>
                             <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
@@ -186,7 +226,7 @@
                             <source media="(min-width:768px)" srcset="./assets/img/product_desktop_3.png">
                             <img src="./assets/img/product_mobile_4.png" alt="picture 4">
                         </picture>
-                        .<figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
+                        <figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
                             <h3>Graphic Design</h3>
                             <p class="text-add">English Department</p>
                             <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
@@ -206,7 +246,7 @@
                             <source media="(min-width:768px)" srcset="./assets/img/product_desktop_4.png">
                             <img src="./assets/img/product_mobile_4.png" alt="picture 4">
                         </picture>
-                        .<figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
+                        <figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
                             <h3>Graphic Design</h3>
                             <p class="text-add">English Department</p>
                             <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
@@ -221,158 +261,160 @@
                     </figure>
                 </li>
             </ul>
-            <ul class="hidden">
-                <li>
-                    <figure>
-                        <img src="./assets/img/product_desktop_5.png" alt="picture 5">
-                        .<figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
-                            <h3>Graphic Design</h3>
-                            <p class="text-add">English Department</p>
-                            <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
-                                    class="text-new">$6.48</span></div>
-                            <div class="flex gap-5">
-                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
-                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
-                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
-                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
+            <ul class="hidden lg:flex lg:w-[1060px] mx-auto my-0">
+                <div class="hidden lg:flex flex-wrap gap-30 items-center justify-center pt-48">
+                    <li>
+                        <figure>
+                            <img src="./assets/img/product_desktop_5.png" alt="picture 5">
+                            <figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
+                                <h3>Graphic Design</h3>
+                                <p class="text-add">English Department</p>
+                                <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
+                                        class="text-new">$6.48</span></div>
+                                <div class="flex gap-5">
+                                    <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                    <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                    <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                    <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
 
-                <li>
-                    <figure>
-                        <picture>
-                            <img src="./assets/img/product_desktop_6.png" alt="picture 6">
-                        </picture>
-                        .<figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
-                            <h3>Graphic Design</h3>
-                            <p class="text-add">English Department</p>
-                            <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
-                                    class="text-new">$6.48</span></div>
-                            <div class="flex gap-5">
-                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
-                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
-                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
-                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <picture>
-                            <img src="./assets/img/product_desktop_7.png" alt="picture 7">
-                        </picture>
-                        .<figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
-                            <h3>Graphic Design</h3>
-                            <p class="text-add">English Department</p>
-                            <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
-                                    class="text-new">$6.48</span></div>
-                            <div class="flex gap-5">
-                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
-                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
-                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
-                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <picture>
-                            <img src="./assets/img/product_desktop_8.png" alt="picture 8">
-                        </picture>
-                        .<figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
-                            <h3>Graphic Design</h3>
-                            <p class="text-add">English Department</p>
-                            <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
-                                    class="text-new">$6.48</span></div>
-                            <div class="flex gap-5">
-                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
-                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
-                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
-                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <picture>
-                            <img src="./assets/img/product_desktop_9.png" alt="picture 9">
-                        </picture>
-                        .<figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
-                            <h3>Graphic Design</h3>
-                            <p class="text-add">English Department</p>
-                            <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
-                                    class="text-new">$6.48</span></div>
-                            <div class="flex gap-5">
-                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
-                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
-                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
-                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <picture>
-                            <img src="./assets/img/product_desktop_10.png" alt="picture 10">
-                        </picture>
-                        .<figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
-                            <h3>Graphic Design</h3>
-                            <p class="text-add">English Department</p>
-                            <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
-                                    class="text-new">$6.48</span></div>
-                            <div class="flex gap-5">
-                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
-                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
-                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
-                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <picture>
-                            <img src="./assets/img/product_desktop_11.png" alt="picture 11">
-                        </picture>
-                        .<figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
-                            <h3>Graphic Design</h3>
-                            <p class="text-add">English Department</p>
-                            <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
-                                    class="text-new">$6.48</span></div>
-                            <div class="flex gap-5">
-                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
-                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
-                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
-                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <picture>
-                            <img src="./assets/img/product_desktop_12.png" alt="picture 12">
-                        </picture>
-                        .<figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
-                            <h3>Graphic Design</h3>
-                            <p class="text-add">English Department</p>
-                            <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
-                                    class="text-new">$6.48</span></div>
-                            <div class="flex gap-5">
-                                <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
-                                <img src="assets/svg/figcaption-big-green.svg" alt="green">
-                                <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
-                                <img src="assets/svg/figcaption-big-black.svg" alt="black">
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <img src="./assets/img/product_desktop_6.png" alt="picture 6">
+                            </picture>
+                            <figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
+                                <h3>Graphic Design</h3>
+                                <p class="text-add">English Department</p>
+                                <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
+                                        class="text-new">$6.48</span></div>
+                                <div class="flex gap-5">
+                                    <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                    <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                    <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                    <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <img src="./assets/img/product_desktop_7.png" alt="picture 7">
+                            </picture>
+                            <figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
+                                <h3>Graphic Design</h3>
+                                <p class="text-add">English Department</p>
+                                <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
+                                        class="text-new">$6.48</span></div>
+                                <div class="flex gap-5">
+                                    <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                    <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                    <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                    <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <img src="./assets/img/product_desktop_8.png" alt="picture 8">
+                            </picture>
+                            <figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
+                                <h3>Graphic Design</h3>
+                                <p class="text-add">English Department</p>
+                                <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
+                                        class="text-new">$6.48</span></div>
+                                <div class="flex gap-5">
+                                    <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                    <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                    <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                    <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <img src="./assets/img/product_desktop_9.png" alt="picture 9">
+                            </picture>
+                            <figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
+                                <h3>Graphic Design</h3>
+                                <p class="text-add">English Department</p>
+                                <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
+                                        class="text-new">$6.48</span></div>
+                                <div class="flex gap-5">
+                                    <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                    <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                    <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                    <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <img src="./assets/img/product_desktop_10.png" alt="picture 10">
+                            </picture>
+                            <figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
+                                <h3>Graphic Design</h3>
+                                <p class="text-add">English Department</p>
+                                <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
+                                        class="text-new">$6.48</span></div>
+                                <div class="flex gap-5">
+                                    <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                    <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                    <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                    <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <img src="./assets/img/product_desktop_11.png" alt="picture 11">
+                            </picture>
+                            <figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
+                                <h3>Graphic Design</h3>
+                                <p class="text-add">English Department</p>
+                                <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
+                                        class="text-new">$6.48</span></div>
+                                <div class="flex gap-5">
+                                    <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                    <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                    <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                    <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <img src="./assets/img/product_desktop_12.png" alt="picture 12">
+                            </picture>
+                            <figcaption class="flex flex-col gap-10 justify-center items-center font-bold mt-24">
+                                <h3>Graphic Design</h3>
+                                <p class="text-add">English Department</p>
+                                <div class="flex gap-5"><span class="text-muted font-bold">$16.48</span><span
+                                        class="text-new">$6.48</span></div>
+                                <div class="flex gap-5">
+                                    <img src="assets/svg/figcaption-big-blue.svg" alt="blue">
+                                    <img src="assets/svg/figcaption-big-green.svg" alt="green">
+                                    <img src="assets/svg/figcaption-big-orange.svg" alt="orange">
+                                    <img src="assets/svg/figcaption-big-black.svg" alt="black">
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </div>
             </ul>
         </section>
         <section class="flex justify-center items-center mt-[83px] font-bold pb-[80px]">
@@ -389,80 +431,88 @@
                     class="w-[83px] h-[74px] flex justify-center items-center text-primary hover:text-white hover:bg-primary">Next</a>
             </div>
         </section>
-        <section class="flex flex-col gap-60 items-center pt-[160px] pb-[160px] bg-altBg">
-            <img src="assets/svg/fa-brands_hooli.svg" alt="hooli" class="max-w-[160px] max-w-[145px]">
-            <img src="assets/svg/fa-brands_lyft.svg" alt="lyft" class="max-w-[160px] max-w-[145px]">
-            <img src="assets/svg/fa-brands_pied-piper-hat.svg" alt="pied piper hat" class="max-w-[160px] max-w-[145px]">
-            <img src="assets/svg/fa-brands_stripe.svg" alt="stripe" class="max-w-[160px] max-w-[145px]">
-            <img src="assets/svg/fa-brands_aws.svg" alt="aws" class="max-w-[160px] max-w-[145px]">
-            <img src="assets/svg/fa-brands_reddit-alien.svg" alt="reddit" class="max-w-[160px] max-w-[145px]">
+        <section
+            class="flex flex-col gap-60 items-center pt-[160px] pb-[160px] bg-altBg lg:flex-row lg:justify-center lg:gap-30">
+            <img src="assets/svg/fa-brands_hooli.svg" alt="hooli" class="max-w-[140px] max-h-[145px]">
+            <img src="assets/svg/fa-brands_lyft.svg" alt="lyft" class="max-w-[140px] max-h-[145px]">
+            <img src="assets/svg/fa-brands_pied-piper-hat.svg" alt="pied piper hat" class="max-w-[140px] max-h-[145px]">
+            <img src="assets/svg/fa-brands_stripe.svg" alt="stripe" class="max-w-[140px] max-h-[145px]">
+            <img src="assets/svg/fa-brands_aws.svg" alt="aws" class="max-w-[140px] max-h-[145px]">
+            <img src="assets/svg/fa-brands_reddit-alien.svg" alt="reddit" class="max-w-[140px] max-h-[145px]">
         </section>
     </main>
-    <footer class="pt-[53px] pl-[47px]">
-        <img src="./assets/svg/Bandage.svg" alt="main logo" class="mb-24">
-        <div class="flex gap-20 mb-[110px]">
-            <img src="./assets/svg/facebook-icon.svg" alt="facebook">
-            <img src="./assets/svg/instagram-icon.svg" alt="instagram">
-            <img src="./assets/svg/twitter-icon.svg" alt="twitter">
+    <footer class="pt-[53px]">
+        <div class="px-200">
+            <div class="mb-[110px] lg:flex lg:items-center lg:justify-between lg:mb-50">
+                <img src="./assets/svg/Bandage.svg" alt="main logo" class="mb-24 lg:mb-0">
+                <div class="flex gap-20 lg:mr-60">
+                    <img src="./assets/svg/facebook-icon.svg" alt="facebook">
+                    <img src="./assets/svg/instagram-icon.svg" alt="instagram">
+                    <img src="./assets/svg/twitter-icon.svg" alt="twitter">
+                </div>
+            </div>
+            <ul class="text-add font-bold text-14 lg:border-t lg:flex lg:justify-between lg:pt-50">
+                <li>
+                    <ul>
+                        <li class="mb-20"><a href="#" class="text-main text-16">Company Info</a></li>
+                        <li class="mb-10">About Us</a></li>
+                        <li class="mb-10">Carrier</a></li>
+                        <li class="mb-10">We are hiring</a></li>
+                        <li class="mb-30">Blog</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="mb-20"><a href="#" class="text-main text-16">Legal</a></li>
+                        <li class="mb-10">About Us</a></li>
+                        <li class="mb-10">Carrier</a></li>
+                        <li class="mb-10">We are hiring</a></li>
+                        <li class="mb-30">Blog</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="mb-20"><a href="#" class="text-main text-16">Features</a></li>
+                        <li class="mb-10">Business Marketing</a></li>
+                        <li class="mb-10">User Analytic</a></li>
+                        <li class="mb-10">Live Chat</a></li>
+                        <li class="mb-30">Unlimited Support</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="mb-20"><a href="#" class="text-main text-16">Resources</a></li>
+                        <li class="mb-10">IOS & Android</a></li>
+                        <li class="mb-10">Watch a Demo</a></li>
+                        <li class="mb-10">Customers</a></li>
+                        <li class="mb-30">API</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="">
+                        <li class="mb-20"><a href="#" class="text-main text-16">Get In Touch</a></li>
+                        <li>
+                            <div>
+                                <form action="#" class="">
+                                    <input class="w-[204px] h-[58px] border rounded pl-20 bg-[#F9F9F9] text-[#E6E6E6]"
+                                        type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                        size="30" placeholder="Your Email" required />
+                                    <button
+                                        class="w-[117px] h-[58px] border rounded align-center bg-primary text-white mb-[3px]"
+                                        type="submit" id="email-button">Subscribe</button>
+                                </form>
+                            </div>
+                        </li>
+                        <li class="font-normal text-[12px] pb-[70px]">
+                            <p>Lore imp sum dolor Amit</p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <ul class="">
-            <li>
-                <ul>
-                    <li><a href="#" class="footer__main-list_heading-item">Company Info</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Carrier</a></li>
-                    <li><a href="#">We are hiring</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><a href="#" class="footer__main-list_heading-item">Legal</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Carrier</a></li>
-                    <li><a href="#">We are hiring</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><a href="#" class="footer__main-list_heading-item">Features</a></li>
-                    <li><a href="#">Business Marketing</a></li>
-                    <li><a href="#">User Analytic</a></li>
-                    <li><a href="#">Live Chat</a></li>
-                    <li><a href="#">Unlimited Support</a></li>
-                </ul>
-            </li>
-            <li>
-                <ul>
-                    <li><a href="#" class="footer__main-list_heading-item">Resources</a></li>
-                    <li><a href="#">IOS & Android</a></li>
-                    <li><a href="#">Watch a Demo</a></li>
-                    <li><a href="#">Customers</a></li>
-                    <li><a href="#">API</a></li>
-                </ul>
-            </li>
-            <li>
-                <ul class="footer__main-list__form">
-                    <li><a href="#" class="footer__main-list_heading-item">Get In Touch</a></li>
-                    <li>
-                        <div>
-                            <form action="#" class="footer__form">
-                                <input class="footer__form_email" type="email" id="email"
-                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30" placeholder="Your Email"
-                                    required />
-                                <button class="footer__form_button" type="submit" id="email-button">Subscribe</button>
-                            </form>
-                        </div>
-                    </li>
-                    <li class="footer__main-list__post-form-text">
-                        <p>Lore imp sum dolor Amit</p>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <div class="footer__rights-reserved">
-            <span class="footer__rights-reserved-text">Made With Love By Finland All Right Reserved </span>
+        <div class="flex flex-col justify-center items-center bg-altBg text-add font-bold pt-25 pb-25 lg:flex-row lg:gap-[4px] lg:justify-start pl-200 ">
+            <span class="mb-5 lg:mb-0">Made With Love By </span>
+            <span>All Right Reserved </span>
         </div>
     </footer>
 
